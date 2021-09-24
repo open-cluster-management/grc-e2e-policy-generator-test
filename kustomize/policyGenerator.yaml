@@ -1,0 +1,32 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: e2e-grc-policy-generator
+placementBindingDefaults:
+  name: e2e-grc-placement-binding
+policyDefaults:
+  controls:
+    - PR.DS-1 Data-at-rest
+  namespace: grc-e2e-policy-generator
+  placement:
+    name: e2e-grc-placement-rule
+    clusterSelectors:
+      local-cluster: "true"
+  remediationAction: inform
+  severity: medium
+policies:
+  - name: e2e-grc-policy-app
+    manifests:
+      - path: policy1
+        patches:
+          - apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+              name: gitops-demo
+              namespace: grc-e2e-policy-generator
+            spec:
+              template:
+                spec:
+                  containers:
+                    - name: gitops-demo
+                      image: quay.io/centos7/httpd-24-centos7:2.4

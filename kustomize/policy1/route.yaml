@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: gitops-demo
+  namespace: grc-e2e-policy-generator
+  labels:
+    app: gitops-demo
+spec:
+  port:
+    targetPort: http
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+  to:
+    kind: Service
+    name: gitops-demo
