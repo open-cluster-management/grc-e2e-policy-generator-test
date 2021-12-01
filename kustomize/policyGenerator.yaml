@@ -18,3 +18,7 @@ policies:
   - name: e2e-grc-policy-app
     manifests:
       - path: policy1
+        patches:
+          - metadata:
+              annotations:
+                some-annotation: some value
