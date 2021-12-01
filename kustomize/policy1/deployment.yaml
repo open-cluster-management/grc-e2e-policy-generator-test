@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gitops-demo
-  namespace: grc-e2e-policy-generator
+  namespace: policy-generator-e2e
   labels:
     app: gitops-demo
 spec:
@@ -19,4 +19,4 @@ spec:
       - name: gitops-demo
         ports:
         - containerPort: 8080
-        image: quay.io/centos7/httpd-24-centos7:2021-08-06T13_04_45_02_00-905d024
+        image: quay.io/centos7/httpd-24-centos7:2.4
