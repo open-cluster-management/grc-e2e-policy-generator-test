@@ -15,6 +15,6 @@ policyDefaults:
   remediationAction: inform
   severity: medium
 policies:
-  - name: e2e-grc-policy-kyverno
+  - name: e2e-grc-policy-gatekeeper
     manifests:
       - path: policy1
