@@ -30,3 +30,13 @@ policies:
                   containers:
                     - name: gitops-demo
                       image: quay.io/centos7/httpd-24-centos7:2.4
+    policySets:
+      - e2e-policyset
+    GeneratePlacementWhenInSet: true
+policySets:
+- name: e2e-policyset
+  description: this is an e2e policy set.
+  placement:
+    name: e2e-grc-policyset-placement-rule
+    clusterSelectors:
+      local-cluster: "true"
