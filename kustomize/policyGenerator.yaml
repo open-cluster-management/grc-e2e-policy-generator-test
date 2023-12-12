@@ -10,7 +10,7 @@ policyDefaults:
   namespace: grc-e2e-policy-generator
   placement:
     name: e2e-grc-placement-rule
-    clusterSelectors:
+    labelSelector:
       local-cluster: "true"
   remediationAction: inform
   severity: medium
@@ -38,5 +38,5 @@ policySets:
   description: this is an e2e policy set.
   placement:
     name: e2e-grc-policyset-placement-rule
-    clusterSelectors:
+    labelSelector:
       local-cluster: "true"
