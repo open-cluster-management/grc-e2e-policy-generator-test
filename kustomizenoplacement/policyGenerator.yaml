@@ -1,0 +1,14 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: e2e-grc-policy-generator-noplacement
+policyDefaults:
+  controls:
+    - PR.DS-1 Data-at-rest
+  namespace: default
+  remediationAction: inform
+  severity: medium
+policies:
+  - name: rhacm4k-42151
+    manifests:
+      - path: policy1

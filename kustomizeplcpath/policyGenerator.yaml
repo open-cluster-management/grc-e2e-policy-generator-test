@@ -1,0 +1,18 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: e2e-grc-policy-generator
+placementBindingDefaults:
+  name: e2e-grc-placement-binding
+policyDefaults:
+  controls:
+    - PR.DS-1 Data-at-rest
+  namespace: default
+  placement:
+    placementPath: placement/placement.yaml
+  remediationAction: enforce
+  severity: medium
+policies:
+  - name: rhacm4k-42155
+    manifests:
+      - path: policy1
