@@ -10,7 +10,7 @@ policyDefaults:
   description: "~This is a policy_generator test description!@#"
   policyLabels:
     - e2e: "true"
-    - testid: "100"
+      testid: "100"
   namespace: default
   placement:
     placementPath: placement/placement.yaml
