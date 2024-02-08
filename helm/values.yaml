@@ -1,0 +1,24 @@
+replicaCount: 1
+
+enableLookup: false
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+  automount: true
+
+service:
+  type: ClusterIP
+  port: 80
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
