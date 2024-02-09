@@ -3,12 +3,12 @@ entries:
   helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-31T17:47:17.775753-05:00"
+    created: "2024-02-08T15:55:49.744997-05:00"
     description: A Helm chart for testing the Policy Generator
-    digest: e06fa1a2ecfc4c7ba3f18156dc73247010565f373827d5cf5f5d06e01e3bf02c
+    digest: cd85f8293612983b084f0fb77517c18d99e8d5d49442331d044e50187d577ced
     name: helm
     type: application
     urls:
-    - https://github.com/stolostron/grc-e2e-policy-generator-test
+    - https://github.com/stolostron/grc-e2e-policy-generator-test/raw/main/helm/
     version: 0.1.0
-generated: "2024-01-31T17:47:17.774903-05:00"
+generated: "2024-02-08T15:55:49.744539-05:00"
