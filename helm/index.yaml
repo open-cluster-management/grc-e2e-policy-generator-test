@@ -9,6 +9,6 @@ entries:
     name: helm
     type: application
     urls:
-    - https://github.com/stolostron/grc-e2e-policy-generator-test/raw/main/helm/
+    - https://github.com/stolostron/grc-e2e-policy-generator-test/raw/main/helm/helm-0.1.0.tgz
     version: 0.1.0
 generated: "2024-02-08T15:55:49.744539-05:00"
