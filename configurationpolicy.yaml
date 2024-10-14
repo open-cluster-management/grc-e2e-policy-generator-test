@@ -1,0 +1,15 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: ConfigurationPolicy
+metadata:
+  name: default-namespace-exists
+  namespace: open-cluster-management-policies
+spec:
+  remediationAction: inform
+  severity: low
+  object-templates:
+    - complianceType: musthave
+      objectDefinition:
+        kind: Namespace
+        apiVersion: v1
+        metadata:
+          name: default

@@ -1,8 +1,0 @@
----
-apiVersion: policy.open-cluster-management.io/v1
-kind: Policy
-metadata:
-  annotations:
-    authored-by: Tom Hanks
-  name: e2e-grc-policy-app
-  namespace: grc-e2e-policy-generator
