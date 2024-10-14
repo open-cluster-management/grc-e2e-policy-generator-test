@@ -1,7 +1,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: ConfigurationPolicy
 metadata:
-  name: default-namespace-exists
+  name: default-namespace-exists-rhacm4k-52436
   namespace: open-cluster-management-policies
 spec:
   remediationAction: inform
